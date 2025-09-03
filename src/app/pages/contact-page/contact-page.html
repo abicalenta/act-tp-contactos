@@ -1,0 +1,38 @@
+<!-- <a routerlink='login'> ir a login </a>-->
+ <div>
+    <span>nombre</span>
+    <span>telefono</span>
+    <span>email</span>
+    <span>Grupos</span>
+    <span>acciones</span>
+ </div>
+
+ <ul>
+    @for (contactoindividual of contacto; track $index) {
+        <app-contact-detail-page [Contact]="contactoindividual"></app-contact-detail-page>
+    }
+ </ul>
+
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" href="contact-page.scss">
+ </head>
+
+ <div class="contacto-pagina-1">
+   <header class="encabezado-de-pagina">
+      <h1>CONTACTOS</h1>
+      <input class="busqueda" type="text" placeholder="Buscar contacto">
+   </header>
+
+ </div>
+ <body>
+   <h1 class="H1">crear un contacto</h1>
+   <button class="boton-1"> Ingresa contacto </button>
+   <button class="boton-2"> registra tu contacto </button>
+   
+ </body>
+ </html>

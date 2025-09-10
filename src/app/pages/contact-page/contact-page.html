@@ -1,38 +1,61 @@
 <!-- <a routerlink='login'> ir a login </a>-->
- <div>
-    <span>nombre</span>
-    <span>telefono</span>
-    <span>email</span>
-    <span>Grupos</span>
-    <span>acciones</span>
- </div>
+<div>
+   <span>nombre</span>
+   <span>telefono</span>
+   <span>email</span>
+   <span>Grupos</span>
+   <span>acciones</span>
+</div>
 
- <ul>
-    @for (contactoindividual of contacto; track $index) {
-        <app-contact-detail-page [Contact]="contactoindividual"></app-contact-detail-page>
-    }
- </ul>
+<ul>
+   @for (contactoindividual of contactsService.contacts; track $index) {
+   <app-contact-detail-page [Contact]="contactoindividual"></app-contact-detail-page>
+   }
+</ul>
 
-<!DOCTYPE html>
- <html lang="en">
- <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Document</title>
-   <link rel="stylesheet" href="contact-page.scss">
- </head>
+<h2>Nuevo contacto</h2>
+<form (ngSubmit)="createContact(newContactForm.value)" #newContactForm="ngForm">
+   <div>
+      <label for="first-name">Nombre</label>
+      <input id="first-name" name="firstName" type="text" ngModel required="true" minlength="2" maxlength="20">
+   </div>
+   <div>
+      <label for="last-name">Apellido</label>
+      <input id="last-name" name="lastName" type="text" ngModel maxlength="20">
+   </div>
+   <div>
+      <label for="phone">Telefono</label>
+      <input id="phone" name="number" type="text" ngModel required="true" minlength="3" maxlength="30">
+   </div>
+   <div>
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" ngModel maxlength="40">
+   </div>
+   <div>
+      <label for="favourite">Favorito</label>
+      <input id="favourite" name="isFavourite" type="checkbox" ngModel>
+   </div>
+   <div>
+      <label for="address">Direccion</label>
+      <input id="address" name="address" type="text" ngModel minlength="5">
+   </div>
+   <div>
+      <label for="company">Companía</label>
+      <input id="company" name="company" type="text" ngModel minlength="2">
+   </div>
+   <div>
+      <label for="image">URL Imagen</label>
+      <input id="image" name="image" type="text" ngModel minlength="10">
+   </div>
+   <button [disabled]="newContactForm.invalid">+</button>
 
- <div class="contacto-pagina-1">
+</form>
+<div class="contacto-pagina-1">
    <header class="encabezado-de-pagina">
       <h1>CONTACTOS</h1>
       <input class="busqueda" type="text" placeholder="Buscar contacto">
    </header>
-
- </div>
- <body>
-   <h1 class="H1">crear un contacto</h1>
-   <button class="boton-1"> Ingresa contacto </button>
-   <button class="boton-2"> registra tu contacto </button>
-   
- </body>
- </html>
+</div>
+<h1 class="H1">crear un contacto</h1>
+<button class="boton-1"> Ingresa contacto </button>
+<button class="boton-2"> registra tu contacto </button>

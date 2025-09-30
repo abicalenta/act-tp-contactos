@@ -1,14 +1,15 @@
 import { Component, inject } from '@angular/core';
-import { RouterLink} from '@angular/router';
+import { RouterLink, RouterOutlet} from '@angular/router';
+import { AuthService } from '../services/auth-service';
 
 @Component({
     selector: 'app-logged-layout',
-    imports: [RouterLink],
+    imports: [RouterOutlet, RouterLink],
     templateUrl: './logged-Layout.html',
     styleUrl: './logged-layout.scss'
 
 })
 export class LoggedLayout{
 
-    authService = inject(this.authService);
+    authService = inject(AuthService);
 }

@@ -1,9 +1,15 @@
-export interface User{
-    id: string,
-    /** nombre del usuario */
-    firstname: string,
-    /** apellido del usuario */
-    lastname: string,
-    username: string,
-    password: string,
+export interface Contact {
+  id: string,
+  /** Nombre del contacto */
+  firstName: string,
+  lastName: string,
+  address: string
+  email: string,
+  image: string,
+  number: string,
+  company: string
+  isFavorite: boolean
 }
+
+/** Interfaz que es igual a Contact pero sin ID */
+export type NewContact = Omit<Contact,"id">;

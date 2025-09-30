@@ -5,6 +5,7 @@ import { inject, Injectable } from '@angular/core';
 })
 export class AuthService {
   loggeado:boolean = false;
+  token: any;
 
   login(){
     this.loggeado = true;

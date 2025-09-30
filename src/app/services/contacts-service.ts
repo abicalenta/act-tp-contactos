@@ -5,6 +5,7 @@ import { Contact, NewContact } from '../interfaces/contact';
   providedIn: 'root'
 })
 export class ContactsService {
+  [x: string]: any;
   aleatorio = Math.random()
 
   contacts: Contact[] = [
@@ -36,7 +37,7 @@ export class ContactsService {
     const res = await fetch("https://agenda-api.somee.com/api/contacts",
       {
         headers:{
-          Authorization: "Bearer "+this.authService.token,
+          Authorization: "Bearer "+this['authService'].token,
         }
       }
     )
@@ -67,9 +68,3 @@ export class ContactsService {
 
   setFavourite() { }
 }
-
-import { AuthService } from './auth-service';
-
-@Injectable({
-  providedIn: 'root'
-})

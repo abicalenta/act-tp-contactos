@@ -1,11 +1,21 @@
-<a routerLink="/"> Ir a contactos</a>
-
-<!-- formulario de login: -->
-    <form>
-        <label for=""> User </label>
-        <input type="text">
-        <label for=""> Password </label>
-        <input type="password">
-        <button> Iniciar sesion</button>
-        <p> No tienes cuenta?</p> <a routerLink="register"> Registrarse </a>
+<div id="container" class="card">
+    <h1>Iniciar seción</h1>
+    <form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+    <div>
+        <label for="email">Correo electrónico</label>
+        <input id="email" name="email" type="email" ngModel #email="ngModel" required="true" autocomplete="email">
+        @if (email.invalid && !email.pristine) {
+            <p class="error">Debe colocar un correo electrónico.</p>
+        }
+    </div>
+    <div>
+        <label for="password">Contraseña</label>
+        <input id="password" name="password" type="password" ngModel #password="ngModel" minlength="4" autocomplete="current-password">
+        @if (password.invalid && !password.pristine) {
+            <p class="error">Debe colocar una contrasena de al menos 4 caracteres.</p>
+        }
+    </div>
+    <button [disabled]="isLoading || loginForm.invalid">Iniciar seción</button>
+    
     </form>
+</div>

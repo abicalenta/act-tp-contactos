@@ -1,7 +1,8 @@
 import { Component, Inject, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-import { userService } from '../../services/user-service';
+import {UserService 
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register-page',
@@ -29,7 +30,7 @@ export class RegisterPage {
       return
     }
     this.isLoading = true;
-    const res = await this.usersService.register(form.value);
+    const res = await this.userService.register(form.value);
     if(res.ok){
       this.router.navigate(["/login"])
     }

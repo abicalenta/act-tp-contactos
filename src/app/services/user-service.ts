@@ -1,20 +1,21 @@
-import { importProvidersFrom, Injectable } from "@angular/core";
-import { newUser } from "../interfaces/user";
+import { Injectable } from "@angular/core";
+import {NewUser} 
+
 
 @Injectable({
-    providedIn: 'root'
+  providedIn: 'root'
 })
 export class userService {
-    register(registerData:newUser){
-        const res = await fetch("http://agenda-api.somee.com/api/Users",
+
+    //*Registar el usuario en el back */
+  async register(registerData:NewUser) {
+    return await fetch("http://agenda-api.somee.com/api/Users", 
         {
-            method:'POST',
-            Headers: {
-                "contact-type": "application/json"
-            },
-            body: JSON.stringify(registerData)
-        });
-        
-    }
-    
+      method: 'POST',
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(registerData)
+    });
+}
 }

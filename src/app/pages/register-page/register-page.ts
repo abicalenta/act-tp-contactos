@@ -1,8 +1,7 @@
-import { Component, Inject, inject } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
-import {UserService 
-import { Router } from '@angular/router';
+import { Component, Inject, inject } from "../../../../node_modules/@angular/core/index";
+import { FormsModule } from "../../../../node_modules/@angular/forms/index";
+import { Router, RouterModule } from "../../../../node_modules/@angular/router/index";
+
 
 @Component({
   selector: 'app-register-page',
@@ -12,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class RegisterPage {
   errorRegister=false;
-  userService = Inject(userService);
+  userService = Inject(this.userService);
   isLoading = false;
   router = inject(Router);
 

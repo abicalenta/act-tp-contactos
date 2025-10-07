@@ -1,8 +1,9 @@
-import { Routes } from '@angular/router';
+
 import { LoginPage } from './pages/login-page/login-page';
 import { ContactPage } from './pages/contact-page/contact-page';
 import { LoggedLayout } from './layouts/logged-layout';
 import { ContactDetailsPage } from './pages/contact-details-page/contact-details-page';
+import { Routes } from '../../node_modules/@angular/router/index';
 
 export const routes: Routes = [
     {

@@ -1,4 +1,5 @@
-import { Injectable } from '@angular/core';
+
+import { Injectable } from '../../../node_modules/@angular/core/index';
 import { Contact, NewContact } from '../interfaces/contact';
 
 @Injectable({

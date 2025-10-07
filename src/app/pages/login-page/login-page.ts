@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
-import { FormsModule, NgForm } from "@angular/forms";
+
+import { Component } from '../../../../node_modules/@angular/core/index';
+import { FormsModule, NgForm } from '../../../../node_modules/@angular/forms/index';
+import { RouterModule } from '../../../../node_modules/@angular/router/index';
 
 @Component({
   selector: 'app-login-page',

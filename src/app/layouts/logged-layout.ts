@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { AuthService } from '../services/auth-service';
-
+import Swal from 'sweetalert2'
 
 
 @Component({
@@ -11,27 +11,21 @@ import { AuthService } from '../services/auth-service';
     styleUrl: './logged-layout.scss',
 
 })
-export class LoggedLayout{
+export class LoggedLayout {
 
     authService = inject(AuthService);
-}
 
-openLogotModal(){
-    Swal.fire({
-        title: "Do you want to save the changes?",
-        showDenyButton: true,
-        showCancelButton: true,
-        confirmButtonText: "Save",
-        denyButtonText: `Don't save`
-}).then((result: { isCDenied: any; }) => {
-  if (result.isCDenied) {
-    this.authService.logout
-    
-  }
-  }
-});
-}
-
-function openLogotModal() {
-    throw new Error('Function not implemented.');
+    openLogotModal() {
+        Swal.fire({
+            title: "Do you want to save the changes?",
+            showDenyButton: true,
+            showCancelButton: true,
+            confirmButtonText: "Save",
+            denyButtonText: `Don't save`
+        }).then((result: { isCDenied: any; }) => {
+            if (result.isCDenied) {
+                this.authService.logout()
+            }
+        })
+    }
 }

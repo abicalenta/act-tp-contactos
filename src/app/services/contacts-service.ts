@@ -60,7 +60,9 @@ export class ContactsService {
     this.contacts.push(contacto);
   }
 
-  editContact() { }
+  editContact(p0: { id: string; firstName: string; lastName: string; address: string; email: string; Image: string; number: string; company: string; isFavourite: boolean; }) { 
+    
+  }
 
   /** Borra un contacto */
   deleteContact(id:string) {

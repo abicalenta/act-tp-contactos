@@ -1,6 +1,6 @@
-import { ApplicationConfig, provideBrowserGlobalErrorListeners, provideZoneChangeDetection,  } from '../../node_modules/@angular/core/index';
+import { ApplicationConfig, provideBrowserGlobalErrorListeners, provideZoneChangeDetection } from '@angular/core';
+import { provideRouter } from '@angular/router';
 import { routes } from './app.routes';
-import { provideRouter } from '../../node_modules/@angular/router/index';
 
 export const appConfig: ApplicationConfig = {
   providers: [

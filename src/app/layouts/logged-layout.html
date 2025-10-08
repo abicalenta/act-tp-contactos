@@ -1,10 +1,10 @@
 <div>
     <nav>
         <a routerLink="/">contactos</a>
-        <a routerLink="/">Grupos</a>
-        <button (click)="authService.loggedLayout()"></button>
+        <a routerLink="/groups">Grupos</a>
+        <button (click)= "OpenLogoutModal()">Log Out</button>
 
     </nav>
 </div>
-
+<router-outlet></router-outlet>
 

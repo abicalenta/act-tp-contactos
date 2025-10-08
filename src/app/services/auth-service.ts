@@ -1,5 +1,5 @@
-import { Injectable, inject } from "../../../node_modules/@angular/core/index";
-import { Router } from "../../../node_modules/@angular/router/index";
+import { inject, Injectable } from "@angular/core";
+import { Router } from "@angular/router";
 
 
 

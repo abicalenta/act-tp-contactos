@@ -1,8 +1,8 @@
-import { Component } from '../../../../node_modules/@angular/compiler/index';
-import { inject, input } from '../../../../node_modules/@angular/core/index';
-import { Contact } from '../../interfaces/contact';
-import { ContactsService } from '../../services/contacts-service';
-import { RouterModule } from '../../../../node_modules/@angular/router/index';
+import { Component, input, inject } from "@angular/core"
+import { RouterModule } from "@angular/router"
+import { Contact } from "../../interfaces/contact"
+import { ContactsService } from "../../services/contacts-service"
+
 
 @Component({
   selector: 'app-contact-detail-page',

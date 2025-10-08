@@ -1,5 +1,5 @@
 
-import { Injectable } from '../../../node_modules/@angular/core/index';
+import { Injectable } from '@angular/core';
 import { Contact, NewContact } from '../interfaces/contact';
 
 @Injectable({

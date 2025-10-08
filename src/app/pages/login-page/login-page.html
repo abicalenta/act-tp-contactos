@@ -16,6 +16,10 @@
         }
     </div>
     <button [disabled]="isLoading || loginForm.invalid">Iniciar seción</button>
+    @if (errorLogin) {
+        <p class="error">Datos de sesión incorrectos, intente nuevamente.</p>
+    }
+    <p>No tenes cuenta? <a routerLink="/register">Registrate</a></p>
     
     </form>
 </div>

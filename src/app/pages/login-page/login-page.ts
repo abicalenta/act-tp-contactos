@@ -1,7 +1,7 @@
+import { Component } from "@angular/core";
+import { FormsModule, NgForm } from "@angular/forms";
+import { RouterModule } from "@angular/router";
 
-import { Component } from '../../../../node_modules/@angular/core/index';
-import { FormsModule, NgForm } from '../../../../node_modules/@angular/forms/index';
-import { RouterModule } from '../../../../node_modules/@angular/router/index';
 
 @Component({
   selector: 'app-login-page',
@@ -10,6 +10,7 @@ import { RouterModule } from '../../../../node_modules/@angular/router/index';
   styleUrl: './login-page.scss'
 })
 export class LoginPage {
+errorLogin: any;
 login(_t7: NgForm) {
 throw new Error('Method not implemented.');
 }

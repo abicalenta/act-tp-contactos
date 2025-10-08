@@ -1,6 +1,8 @@
-import { Component, Inject, inject } from "../../../../node_modules/@angular/core/index";
-import { FormsModule } from "../../../../node_modules/@angular/forms/index";
-import { Router, RouterModule } from "../../../../node_modules/@angular/router/index";
+import { Component, Inject, inject } from "@angular/core";
+import { FormsModule } from "@angular/forms";
+import { RouterModule, Router } from "@angular/router";
+import { userService } from "../../services/user-service";
+
 
 
 @Component({
@@ -11,7 +13,7 @@ import { Router, RouterModule } from "../../../../node_modules/@angular/router/i
 })
 export class RegisterPage {
   errorRegister=false;
-  userService = Inject(this.userService);
+  userService = Inject(userService);
   isLoading = false;
   router = inject(Router);
 

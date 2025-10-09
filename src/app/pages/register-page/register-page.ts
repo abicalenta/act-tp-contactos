@@ -11,6 +11,9 @@ import { userService } from "../../services/user-service";
   styleUrl: './register-page.scss'
 })
 export class RegisterPage {
+onRegister() {
+throw new Error('Method not implemented.');
+}
   errorRegister=false;
   userService = Inject(userService);
   isLoading = false;
@@ -38,3 +41,5 @@ export class RegisterPage {
     this.errorRegister = true;
   }
 }
+
+

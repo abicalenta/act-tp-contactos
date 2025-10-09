@@ -1,6 +1,6 @@
 import { Component, inject, input, OnInit, viewChild } from "@angular/core";
 import { FormsModule, NgForm } from "@angular/forms";
-import { Router, RouterLink } from "@angular/router";
+import { RouterLink, Router } from "@angular/router";
 import { Spinner } from "../../components/spinner/spinner";
 import { ContactsService } from "../../services/contacts-service";
 import { Contact, NewContact } from "../../interfaces/contact";
@@ -54,7 +54,10 @@ isLoading: any;
     let res;
     // const res = await this.contactsService.createContact(nuevoContacto);
     if(this.idContacto()){
-      res = await this.contactsService.editContact({...nuevoContacto,id:this.idContacto()!.toString()})
+      res = await this.contactsService.editContact({
+        ...nuevoContacto, id: this.idContacto()!.toString(),
+        isFavorite: undefined
+      })
     } else {
       res = await this.contactsService.createContact(nuevoContacto);
     }

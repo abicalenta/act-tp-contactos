@@ -22,8 +22,8 @@ export class LoggedLayout {
             showCancelButton: true,
             confirmButtonText: "Save",
             denyButtonText: `Don't save`
-        }).then((result: { isCDenied: any; }) => {
-            if (result.isCDenied) {
+        }).then((result: { isDenied: any; }) => {
+            if (result.isDenied) {
                 this.authService.logout()
             }
         })

@@ -7,6 +7,8 @@ import { Groups } from './pages/groups/groups';
 import { RegisterPage } from './pages/register-page/register-page';
 import { NewEditContact } from './pages/new-edit-contact/new-edit-contact';
 
+
+
 export const routes: Routes = [
   {
     path: "login",

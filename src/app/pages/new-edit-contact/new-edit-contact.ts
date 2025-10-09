@@ -1,13 +1,13 @@
 import { Component, inject, input, OnInit, viewChild } from "@angular/core";
 import { FormsModule, NgForm } from "@angular/forms";
-import { RouterLink, Router } from "@angular/router";
+import { Router } from "@angular/router";
 import { Spinner } from "../../components/spinner/spinner";
 import { ContactsService } from "../../services/contacts-service";
 import { Contact, NewContact } from "../../interfaces/contact";
 
 @Component({
   selector: 'app-new-edit-contact',
-  imports: [FormsModule, RouterLink, Spinner],
+  imports: [FormsModule, Spinner],
   templateUrl: './new-edit-contact.html',
   styleUrl: './new-edit-contact.scss'
 })

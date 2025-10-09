@@ -1,21 +1,18 @@
-body{
-    background-color: rgb(211, 125, 211);
-    width: 1500px;
-    
-    
+@use 'styles/forms-pages.scss'; 
+
+body {
+  background-color: rgb(211, 125, 211);
+  width: 1500px;
 }
 
-.boton-1{
-    color: chocolate;
+.boton-1 {
+  color: chocolate;
 }
 
-.boton-2{
-    color: chocolate;
+.boton-2 {
+  color: chocolate;
 }
 
-
-@use 'public/styles/forms-pages.scss'
-
-.error{
-    color: var(--color-error);
+.error {
+  color: var(--color-error);
 }

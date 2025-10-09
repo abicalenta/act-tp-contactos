@@ -30,8 +30,8 @@ export class ContactPage implements OnInit {
       Image: form.image,
       number: form.number,
       company: form.company,
-      isFavourite: form.isfavorite
-
+      isFavourite: form.isfavorite,
+      isFavorite: undefined
     }
 
 

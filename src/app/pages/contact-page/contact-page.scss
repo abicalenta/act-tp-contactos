@@ -12,3 +12,10 @@ body{
 .boton-2{
     color: chocolate;
 }
+
+
+@use 'public/styles/forms-pages.scss'
+
+.error{
+    color: var(--color-error);
+}

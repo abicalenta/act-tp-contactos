@@ -50,6 +50,7 @@ isLoading: any;
       number: form.value.number,
       company: form.value.company,
       isFavourite: form.value.isFavorite,
+      isFavorite: undefined
     }
     let res;
     // const res = await this.contactsService.createContact(nuevoContacto);

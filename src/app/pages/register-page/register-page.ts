@@ -4,7 +4,6 @@ import { RouterModule, Router } from "@angular/router";
 import { userService } from "../../services/user-service";
 
 
-
 @Component({
   selector: 'app-register-page',
   imports: [RouterModule, FormsModule],

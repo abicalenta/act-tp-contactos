@@ -6,7 +6,8 @@ import { LoggedLayout } from './layouts/logged-layout';
 import { Groups } from './pages/groups/groups';
 import { RegisterPage } from './pages/register-page/register-page';
 import { NewEditContact } from './pages/new-edit-contact/new-edit-contact';
-
+import { onlyPublicUserGuard } from './guards/only-public-users-guard2';
+import { onlyLoggedUserGuard } from './guards/only-logged-users-guard';
 
 
 export const routes: Routes = [

@@ -2,7 +2,7 @@ import { inject } from '@angular/core';
 import { CanActivateChildFn, RedirectCommand, Router } from '@angular/router';
 import { AuthService } from '../services/auth-service';
 
-export const onlyLoggedUsersGuard: CanActivateChildFn = (childRoute, state) => {
+export const onlyLoggedUserGuard: CanActivateChildFn = (childRoute, state) => {
   const auth = inject(AuthService);
   const router = inject(Router);
   if(!auth.token){

@@ -1,4 +1,4 @@
-import { Component, inject, input, OnInit, viewChild } from "@angular/core";
+import { Component, ElementRef, inject, input, OnInit, viewChild } from "@angular/core";
 import { FormsModule, NgForm } from "@angular/forms";
 import { Router } from "@angular/router";
 import { Spinner } from "../../components/spinner/spinner";
@@ -14,11 +14,11 @@ import { Contact, NewContact } from "../../interfaces/contact";
 export class NewEditContact implements OnInit {
    contactsService = inject(ContactsService);
    router = inject(Router)
-  errorEnBack = false;
+   errorEnBack = false;
    idContacto = input<number>();
-  contactoOriginal:Contact|undefined = undefined;
+   contactoOriginal:Contact|undefined = undefined;
    form = viewChild<NgForm>('newContactForm');
-isLoading: any;
+   isLoading: any;
   
   async ngOnInit() {
     if(this.idContacto()){
@@ -55,19 +55,16 @@ isLoading: any;
     let res;
     // const res = await this.contactsService.createContact(nuevoContacto);
     if(this.idContacto()){
-      res = await this.contactsService.editContact({
-        ...nuevoContacto, id: this.idContacto()!.toString(),
-        isFavorite: undefined
-      })
+      res = await this.contactsService.editContact({...nuevoContacto, id: this.idContacto()!})
     } else {
       res = await this.contactsService.createContact(nuevoContacto);
     }
-
+    this.isLoading = false;
     if(!res) {
       this.errorEnBack = true;
       return
     };
-    this.router.navigate(["/"]);
+    this.router.navigate(["/contacts",res.id]);
   }
 
 }

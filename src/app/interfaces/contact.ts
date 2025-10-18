@@ -1,6 +1,6 @@
 export interface Contact {
     isFavorite: any;
-    id: string,
+    id: number,
     firstName: string,
     lastName: string,
     address: string,

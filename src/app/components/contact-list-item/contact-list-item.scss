@@ -1,3 +1,48 @@
 .favorite{
     font-weight: bold;
 }
+
+.contact-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.5fr 1fr 1fr 0fr; // mismas columnas que el encabezado
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 1px solid #e6c8ff;
+  }
+  
+  .contact-row:nth-child(even) {
+    background-color: #dbcbff;
+  }
+  
+.actions {
+    display: flex;
+    gap: 2px;
+}
+
+.btn-edit{
+  background-color: rgb(159, 229, 48);
+  color: black; 
+  border: none;
+padding: 6px 12px; 
+border-radius: 5px; 
+font-weight: bold; 
+cursor: pointer;
+transition: all 0.3s;
+}
+
+.btn-delete{
+  background-color: white;
+  color: rgb(200, 54, 213); 
+  border: none;
+padding: 6px 12px; 
+border-radius: 5px; 
+font-weight: bold; 
+cursor: pointer;
+transition: all 0.3s;
+margin-right: 5px;  
+}
+ 
+  .btn-delete:hover, 
+  .btn-edit:hover {
+    background-color: rgb(122, 122, 140);
+  }

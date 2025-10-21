@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { Router, RouterLink, RouterOutlet } from '@angular/router';
-import { AuthService } from '../../services/auth-service';
+import { AuthService } from '../services/auth-service';
 import Swal from 'sweetalert2';
 
 @Component({
@@ -25,8 +25,8 @@ export class LoggedLayout {
       showCancelButton: true,
       showConfirmButton: false,
       cancelButtonText: "Cancelar",
-      denyButtonText: Cerrar sesión
-    }).then((result) => {
+      denyButtonText: 'Cerrar sesión'
+    }).then((result: { isDenied: any; }) => {
       if (result.isDenied) { //Reviso que haya clickeado en el botón rojo.
         this.authService.logout();
       }

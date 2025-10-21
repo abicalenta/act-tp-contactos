@@ -1,11 +1,11 @@
 import { Component, inject } from '@angular/core';
-import { Router, RouterLink, RouterOutlet } from '@angular/router';
+import { Router, RouterLink, RouterOutlet, RouterLinkActive } from '@angular/router';
 import { AuthService } from '../services/auth-service';
 import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-logged-layout',
-  imports: [RouterOutlet, RouterLink],
+  imports: [RouterOutlet, RouterLink, RouterLinkActive],
   templateUrl: './logged-layout.html',
   styleUrl: './logged-layout.scss'
 })

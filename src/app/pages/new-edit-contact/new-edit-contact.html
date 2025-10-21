@@ -3,41 +3,41 @@
  @if(idContacto()){
    <h2>Editar contacto</h2>
   } @else {
-   <h2>Nuevo contacto</h2>
+   <h1>Nuevo contacto</h1>
  }
  <form (ngSubmit)="handleFormSubmission(newContactForm)" #newContactForm="ngForm">
-  <div>
+  <div class="form-group">
     <label for="first-name">Nombre*</label>
     <input id="first-name" name="firstName" type="text" ngModel required="true" minlength="2" maxlength="20" #firstName="ngModel">
     @if (firstName.dirty && firstName.invalid) {
       <p class="error">El nombre es obligatorio y no puede ser una sola letra</p>
     }
   </div>
-  <div>
+  <div class="form-group">
     <label for="last-name">Apellido</label>
     <input id="last-name" name="lastName" type="text" ngModel maxlength="20">
   </div>
-  <div>
+  <div class="form-group">
     <label for="phone">Telefono*</label>
     <input id="phone" name="number" type="text" ngModel required="true" minlength="3" maxlength="30">
   </div>
-  <div>
+  <div class="form-group">
     <label for="email">Email</label>
     <input id="email" name="email" type="email" ngModel maxlength="40">
   </div>
-  <div>
+  <div class="form-group checkbox">
     <label for="favourite">Favorito</label>
     <input id="favourite" name="isFavourite" type="checkbox" ngModel>
   </div>
-  <div>
-    <label for="address">Direccion</label>
+  <div class="form-group">
+    <label for="address">Dirección</label>
     <input id="address" name="address" type="text" ngModel minlength="5">
   </div>
-  <div>
+  <div class="form-group">
     <label for="company">Companía</label>
     <input id="company" name="company" type="text" ngModel minlength="2">
   </div>
-  <div>
+  <div class="form-group">
     <label for="image">URL Imagen</label>
     <input id="image" name="image" type="text" ngModel minlength="10">
   </div>
@@ -50,7 +50,7 @@
   <button [disabled]="newContactForm.invalid || isLoading">Crear</button>
   }
   @if(isLoading){
-    <app-spinner></app-spinner>
+    <app-spinner class="spinner"></app-spinner>
   }
 </form>
 </div>

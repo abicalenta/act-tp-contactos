@@ -1,0 +1,107 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f4f4f4;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+  padding: 2rem;
+}
+
+/* 🔹 Botones del menú lateral */
+.nav-buttons {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.nav-buttons button,
+.nav-buttons a {
+  background-color: #6a1b9a;
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: background-color 0.2s ease;
+}
+
+.nav-buttons button:hover,
+.nav-buttons a:hover {
+  background-color: #4a148c;
+}
+
+/* 🔹 Contenedor principal del contacto */
+.contact-container {
+  background-color: white;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 450px;
+  text-align: center;
+  margin-top: 4rem;
+}
+
+h1 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  color: #444;
+}
+
+p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+/* 🔹 Botones de acción dentro del contacto */
+.actions {
+  margin-top: 1.5rem;
+}
+
+.actions button,
+.actions a {
+  margin: 0.4rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #6a1b9a;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: background-color 0.2s ease;
+}
+
+.actions button:hover,
+.actions a:hover {
+  background-color: #4a148c;
+}
+
+.actions button:last-of-type {
+  background-color: #c62828;
+}
+
+.actions button:last-of-type:hover {
+  background-color: #8e0000;
+}
+
+.star {
+  font-size: 1.5rem;
+  color: gold;
+  margin: 1rem 0;
+}
+
+.loading,
+.not-found {
+  text-align: center;
+  color: #666;
+  font-size: 1rem;
+  padding: 2rem;
+}

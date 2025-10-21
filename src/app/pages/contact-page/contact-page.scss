@@ -1,62 +1,90 @@
 @use './../../../../public/styles/forms-pages.scss'; 
 
-body {
-  background-color: rgb(255, 198, 255);
-  width: 1500px;
+
+$bg-color: #f9f9fb;
+$card-color: #ffffff;
+$accent-color: #7a5af5;
+$text-color: #333;
+$muted-color: #777;
+$border-color: #e5e5e9;
+
+
+:host {
+  display: block;
+  background: $bg-color;
+  min-height: 100vh;
+  padding: 2rem 4rem;
+  font-family: 'Poppins', sans-serif;
+  color: $text-color;
 }
 
-.boton-1 {
-  color: rgb(248, 135, 135);
+
+div {
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr 1fr 1fr;
+  background: $card-color;
+  border-radius: 16px;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  font-size: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+
+  span {
+    color: $muted-color;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
 }
 
-.boton-2 {
-  color: rgb(255, 131, 131);
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+
+  a {
+    text-decoration: none;
+  }
+
+  app-contact-list-item {
+    display: block;
+    background: $card-color;
+    border-radius: 14px;
+    padding: 1rem 1.5rem;
+    transition: all 0.2s ease;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+
+    &:hover {
+      transform: scale(1.01);
+      box-shadow: 0 4px 12px rgba(122, 90, 245, 0.1);
+      border-left: 4px solid $accent-color;
+    }
+  }
 }
 
+a[routerLink="/contacts/new"] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: $accent-color;
+  color: #fff;
+  font-size: 1.8rem;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  box-shadow: 0 4px 12px rgba(122, 90, 245, 0.3);
+  transition: all 0.3s ease;
+  text-decoration: none;
 
-
-.error{
-    color: var(--color-error);
-}
-
-.header {
-    display: flex;
-    font-weight: 700;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgb(122, 122, 140);;
-    color: black;
-    padding: 10px 20px;
-    border-radius: 8px;
-    margin-bottom: 20px;
-
-.h3 {
-    margin: 0;
-    font-size: 22px;
-}
-
-.btn-new {
-    background-color: white;
-    color: black;
-    border: none;
-    padding: 6px 12px;
-    border-radius: 5px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s;
-}
-
-.btn-new:hover {
-    background-color: rgb(122, 122, 140);
-}
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1.5fr 1fr 1fr;
-    padding-top: 30px;
-    font-weight: bold;
-    font-size: 20px;
-    padding: 10px 20px;
-    border-bottom: 2px solid rgb(122, 122, 140);
+  &:hover {
+    background: darken($accent-color, 5%);
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(122, 90, 245, 0.4);
+  }
 }
